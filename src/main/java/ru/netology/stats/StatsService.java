@@ -1,6 +1,6 @@
-package ru.netology;
+package ru.netology.stats;
 
-public class StatisticService {
+public class StatsService {
 
     public long sum(long[] sales) {
         long totalSale = 0;
@@ -52,7 +52,7 @@ public class StatisticService {
         long averageSale = average(sales);
         int counter = 0;
         for (long sale : sales) {
-            if (sale > average(sales)) {
+            if (sale > averageSale) {
                 counter++;
             }
         }

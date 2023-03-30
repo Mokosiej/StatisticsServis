@@ -2,6 +2,7 @@ package ru.netology;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import ru.netology.stats.StatsService;
 
 import java.util.DoubleSummaryStatistics;
 
@@ -11,7 +12,7 @@ class StatsServiceTest {
 
     @Test
     public void testSum(){
-        StatisticService service = new StatisticService();
+        StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long actual = service.sum(sales);
@@ -23,7 +24,7 @@ class StatsServiceTest {
     }
     @Test
     public void testAverage(){
-        StatisticService service = new StatisticService();
+        StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long actual = service.average(sales);
@@ -34,7 +35,7 @@ class StatsServiceTest {
     }
     @Test
     public void testMaximum(){
-        StatisticService service = new StatisticService();
+        StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long actual = service.monthMaximumSale(sales);
@@ -45,7 +46,7 @@ class StatsServiceTest {
     }
     @Test
     public void testMinimum() {
-        StatisticService service = new StatisticService();
+        StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long actual = service.monthMinimumSale(sales);
@@ -56,7 +57,7 @@ class StatsServiceTest {
     }
     @Test
     public void testBelowAverage() {
-        StatisticService service = new StatisticService();
+        StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long actual = service.monthBelowAverage(sales);
@@ -67,7 +68,7 @@ class StatsServiceTest {
     }
     @Test
     public void testAboveAverage() {
-        StatisticService service = new StatisticService();
+        StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long actual = service.monthAboveAverage(sales);
